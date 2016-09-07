@@ -1,0 +1,32 @@
+{% extends 'base/base.html'%}
+
+{% block title %}
+HICC Soporte SSAS
+{% endblock %}
+
+
+{%block content%}
+
+<h1>soy {{name}}</h1>
+
+ {% for i in R %}
+<ul>
+
+        <li style="background: cadetblue">Serial: {{i.serial}}</li>
+        <li style="background:silver ">Pantalla {{i.pantalla}}</li>
+        <li style="background: cadetblue">Lector de Huella: {{i.lector}}</li>
+        <li style="background:silver ">Memoria Ram: {{i.memoria_ram}}</li>
+        <li style="background: cadetblue">Fan Cooler: {{i.fan_cooler}}</li>
+        <li style="background:silver ">Micro Computadora: {{i.computadora}}</li>
+        <li style="background: cadetblue">Electro ('ele'): {{i.ele}}</li>
+
+</ul>
+ {% endfor %}
+
+
+
+
+
+
+
+{% endblock%}

@@ -1,0 +1,46 @@
+{% extends 'base/base.html'%}
+{%load static%}
+{% block title %}
+HICC Soporte SSAS
+{% endblock %}
+
+
+
+{%block content%}
+<h1>scrip 5 funcioones</h1>
+
+<script type="text/javascript">
+    //variable local ya que la variable esta desde afuera
+    var tamanodeLetra="Arial";
+    function mostrarmensaje(mensaje, color) {
+        //variable local ya que esta dentro de la fuuncion y no se puede acedder almenos desde adentr
+        var tamañoLetra =14;
+        if (color == "rojo") {
+            document.write("<p style='color:red'>" + mensaje + "</p>");
+
+        }else{
+            document.write("<p style='color:blue'>" + mensaje + "</p>");
+        }
+
+    }
+
+    mostrarmensaje("Este es el mensaje", "rojo");
+    mostrarmensaje("Este es el mensaje", "azul");
+
+
+function calcularD(precio, descuento){
+    var final = precio - (precio*descuento/100);
+    return final;
+
+}
+    var precioP=(calcularD(600, 15));
+    document.write(precioP);
+</script>
+
+
+
+{% endblock%}
+
+{%block footer%}
+<p>Create by {{name}} 2016</p>
+{%endblock%}

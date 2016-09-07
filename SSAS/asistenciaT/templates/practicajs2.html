@@ -1,0 +1,68 @@
+{% extends 'base/base.html'%}                                               
+{%load static%}                                                             
+{% block title %}                                                           
+HICC Soporte SSAS                                                           
+{% endblock %}                                                              
+                                                                            
+                                                                            
+                                                                            
+{%block content%}                                                           
+<h1>OPERADORES LOGICOS  </h1>
+
+
+<!--                                                                        
+operadfores loguicos en js                                                  
+                                                                            
+<                                                                           
+>                                                                           
+<=                                                                          
+>=                                                                          
+==                                                                          
+=!                                                                          
+%                                                                           
+                                                                            
+AND &&                                                                      
+OR ||                                                                       
+NOT !                                                                       
+XOR xor                                                                     
+-->                                                                         
+                                                                            
+<script type="text/javascript">                                             
+    var descuento= 0;
+    var cantP = prompt("ingrese la cantidad de productos");
+    var preciT= prompt("incique precio total");                             
+    var pago  = confirm("ya pago?")                                         
+
+    if (cantP > 10 && preciT < 500 ){
+        descuento = 10;
+    }
+
+    if (cantP > 10 && preciT >= 500) {
+        descuento =15;
+        }
+    if (preciT < 10 && !pago){
+        descuento =2;
+    }
+    if ((cantP >= 500 || preciT >= 1000)&& (pago==true))
+    {
+    descuento=descuento + descuento *20/100;
+    }
+
+
+
+    if (pago==true){
+        document.write("Gracias por su pago");                              
+        }                                                                   
+    else {                                                                  
+        document.write("deveria pagar jajaja");                             
+    }                                                                       
+                                                                            
+</script>                                                                   
+                                                                            
+                                                                            
+                                                                            
+{% endblock%}                                                               
+                                                                            
+{%block footer%}                                                            
+<p>Create by {{name}} 2016</p>                                              
+{%endblock%}                                                                

@@ -1,0 +1,72 @@
+{% extends 'base/base.html'%}
+{%load static%}
+{% block title %}
+HICC Soporte SSAS
+{% endblock %}
+
+
+
+{%block content%}
+<h1>scrip 4</h1>
+
+
+
+<script type="text/javascript" src="{% static 'js/script4.js' %}"></script>
+
+<form id="for1" name="foem1" method="post" action="">
+    <select name="dia" id="dia">
+        <script type="text/javascript">
+        for (var i =0; i <31; i++){
+        document.write("<option>"+parseInt(i+1)+ "</option>");}
+        </script>
+    </select>
+    <select name="mes" id="mes">
+        <script type="text/javascript">
+        for (var i =0; i <12; i++){
+        document.write("<option>"+parseInt(i+1)+ "</option>");}
+        </script>
+    </select>
+
+     <select name="anio" id="anio">
+        <script type="text/javascript">
+        for (var i =1960; i <2016; i++){
+        document.write("<option>"+parseInt(i+1)+ "</option>");}
+        </script>
+    </select>
+
+    <table nidth="200" border="1"></table>
+    <tr>
+        <script type="text/javascript">
+            for (var k=0; k<12; k++){
+                document.write("<th>Mes"+parseInt(k+1)+"</th>");
+            }
+        </script>
+    </tr>
+
+
+
+
+    <script type="text/javascript">
+        for(var i=0; i<50; i++){
+            document.write("<tr>");
+            for(var j=0; j<12; j++) {
+                document.write("<td><input type='text' size='20'></td>");
+                }
+                document.write("<tr>");
+        }
+    </script>
+
+
+
+
+
+
+
+</form>
+
+
+{% endblock%}
+
+{%block footer%}
+<p>Create by {{name}} 2016</p>
+{%endblock%}

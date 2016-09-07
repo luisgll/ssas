@@ -1,0 +1,24 @@
+{% extends 'base/base.html'%}
+{% block title %}
+SSAS Login
+{% endblock %}
+
+{%block content%}
+<h1>Asistencia Tecnica SSAS LOGIN</h1>
+<h1>Login de aqui</h1>
+{% if user.is_authenticated %}
+ Bienvenidooo {{user.username|capfirst}}
+<a href="home/">SSAS</a>
+<br>
+<a href="logout/admin">Salir</a>
+{% else %}
+<div>
+
+<form method="POST"> {% csrf_token %}
+    <input type="text" name="username" placeholder="Usuario" id="inputEmail">
+    <input type="password" name="password" placeholder="Password" id="inputPassword">
+    <input  type="submit" value="enviar">
+</form>{% endif %}
+</div>
+
+{% endblock %}

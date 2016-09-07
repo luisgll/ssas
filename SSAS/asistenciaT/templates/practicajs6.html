@@ -1,0 +1,48 @@
+{% extends 'base/base.html'%}
+{%load static%}
+{% block title %}
+HICC Soporte SSAS
+{% endblock %}
+
+
+
+{%block content%}
+<h1>scrip 6 uso de funciones</h1>
+
+
+
+<script type="text/javascript" src="{% static 'js/script4.js' %}"></script>
+
+<form id="for1" name="foem1" method="post" action="">
+
+
+    <select name="dia" id="dia">
+        <script type="text/javascript">
+            function fechas(desde, hasta) {
+
+                for (var i = 0; i < hasta; i++) {
+                document.write("<option>" + parseInt(i + desde) + "</option>");
+                }
+            }
+            fechas(1,12);
+        </script>
+    </select>
+    <select name="mes" id="mes">
+        <script type="text/javascript">
+            fechas(1, 31);
+        </script>
+    </select>
+
+     <select name="anio" id="anio">
+         <script type="text/javascript">fechas(1, 2016)</script>
+
+    </select>
+
+</form>
+
+
+{% endblock%}
+
+{%block footer%}
+<p>Create by {{name}} 2016</p>
+{%endblock%}

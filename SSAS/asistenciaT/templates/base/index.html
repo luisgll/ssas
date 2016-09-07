@@ -1,0 +1,33 @@
+{% extends 'base/base.html'%}
+{% block title %}
+HICC Soporte SSAS
+{% endblock %}
+
+
+
+{%block content%}
+
+<h1>Departamento de Asistencia Tecnica SSAS XD</h1>
+<nav class="navbar-default">
+
+<ul lass="dropdown-menu" role="menu">
+    <li><a href="{%url 'registro' %}">Registro de HICC</a></li>
+    <li><a href="{%url 'repuesto' %}">Repuestos disponibles HICC</a></li>
+    <li><a href="https://ssas.casa.gob.ve/">GLPI</a></li>
+    <li><a href="https://www.google.co.ve">Google</a></li>
+    <li><a href="{%url 'logout' %}">Salir</a></li>
+</ul>
+</nav>
+
+
+
+<script type="text/javascript">
+document.write("Hola <b>Mundo</b>");
+    alert("Luis Liscano")
+</script>
+
+{% endblock%}
+
+{%block footer%}
+<p>Create by {{name}} 2016</p>
+{%endblock%}

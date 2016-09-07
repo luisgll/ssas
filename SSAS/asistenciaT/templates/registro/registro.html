@@ -1,0 +1,17 @@
+{% extends 'base/base.html'%}
+
+{% block title %}
+HICC Soporte SSAS
+{% endblock %}
+
+
+{%block content%}
+
+<h1>soy {{name}}</h1>
+
+<ul>
+{%for i in rg%}
+    <li>Tecnico: {{i.tecnico}}<br>Serial: {{i.serial|upper}}<br>Fecha {{i.fecha}}<br>Historia: {{i.historico}}<br> <br></li>
+</ul>{%endfor%}
+
+{%endblock%}

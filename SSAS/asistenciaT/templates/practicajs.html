@@ -1,0 +1,120 @@
+{% extends 'base/base.html'%}
+{%load static%}
+{% block title %}
+HICC Soporte SSAS
+{% endblock %}
+
+
+
+{%block content%}
+<!--Carga de archivo de java script-->
+<h1>Departamento de Asistencia Tecnica SSAS XD</h1>
+<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+
+<script type="text/javascript">
+document.write("Hola <b>Mundo</b>");
+alert("Alerta en java script");
+</script>
+<br>
+<script type="text/javascript">
+    alert("hola aterta dos");
+    document.write("escribiendo en js");
+</script>
+<!--Variable-->
+
+<script type="text/javascript">
+    //variable no pueden comensar con numeros
+    var color;
+    color = "blanco";
+    var precio = 500;//asignacion de nume
+
+    var precio2 = 150.50;//asignacion de variables flotante
+//es sencible a mayuscula y minuscula
+
+
+
+
+</script>
+<br>
+<script type="text/javascript" >
+    document.write(precio2+"<br> lalala  <br>");//concatenacion de strin
+
+    document.write(precio);
+    var impuesto = 50*10/100;
+    var total = impuesto + precio;
+    alert("El precio es "+precio + " y el impuets es "+ impuesto);
+    alert("El precio final es"+total);
+    var potencia = 22;
+    document.write(potencia);
+</script>
+<h1>otro scripts </h1>
+<script type="text/javascript">
+    condicion = prompt("incerte numeros");
+    if (condicion >= 5 ){
+        alert("La condicion se cumple");
+    }
+    else{ alert(" es menor q 5")
+    }
+
+    condicion = parseInt(condicion)+10;//ten encuenta comu un entero y a su vez suale 10
+    document.write("la cantida es" + condicion)
+</script>
+
+
+<p>Variable boobleana</p>
+<script type="text/javascript">
+    var esmayor= prompt("cual es tu edad?");
+
+    if (esmayor < 18) {
+        alert("No esres mayor de edad");
+        esmayor = false;
+    }
+    else{
+        esmayor=true;
+    }
+    if (esmayor == true) {
+        document.write("Es mayor de edad");
+    }else
+    {document.write(" <br> No eres mayor XD");}
+
+
+
+    document.write(esmayor);
+</script>
+<!--
+operadfores loguicos en js
+
+<
+>
+<=
+>=
+==
+=!
+%
+
+AND &&
+OR ||
+NOT !
+XOR xor
+-->
+
+<script type="text/javascript">
+    var cantP = prompt("ingrese la cantidad de productos");
+    var preciT= prompt("incique precio total");
+    var pago  = confirm("ya pago?")
+    if (pago==true){
+        document.write("Gracias por su pago");
+        }
+    else {
+        document.write("deveria pagar jajaja");
+    }
+
+</script>
+
+
+
+{% endblock%}
+
+{%block footer%}
+<p>Create by {{name}} 2016</p>
+{%endblock%}
